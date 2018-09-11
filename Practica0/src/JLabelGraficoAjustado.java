@@ -1,4 +1,6 @@
 import java.awt.*;
+
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -7,6 +9,8 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 
 /** Clase mejorada de JLabel para gestionar imágenes ajustadas al JLabel
+ * 
+ * looooolll
  */
 public class JLabelGraficoAjustado extends JLabel {
 	// la posición X,Y se hereda de JLabel

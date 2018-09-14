@@ -136,25 +136,32 @@ public class Ventana extends JFrame{
 				
 
 				if (key == KeyEvent.VK_LEFT) {
+					ja.setRotacion(c.rot - 0.5);
 
 				}
 
 				if (key == KeyEvent.VK_RIGHT) {
 
+					ja.setRotacion(c.rot + 0.5);
+
 				}
 
 				if (key == KeyEvent.VK_UP) {
 					c.vel = c.vel +1;
-					System.out.println(c.vel);
+					
 
 				}
 
 				if (key == KeyEvent.VK_DOWN) {
+					
+					c.vel -= 1;
 
 				}
 
 			}
 		});
+		
+		setFocusable(true);
 		hilo.start();
 		
 		addMouseListener(new MouseListener() {

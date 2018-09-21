@@ -8,12 +8,14 @@ import java.awt.event.MouseListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class Ventana extends JFrame{
 
 	JPanel panel = new JPanel();
 	JPanel panel2 = new JPanel();
+	JLabel lF = new JLabel("chollo-alfombra-1.pgj");
 	JLabelGraficoAjustado ja = new JLabelGraficoAjustado("coche.png", 100, 100);
 	JButton b1 = new JButton("Acelerar");
 	JButton b2 = new JButton("Frenar");
@@ -27,6 +29,10 @@ public class Ventana extends JFrame{
 	double movY = 0;*/
 	
 	Coche c = new Coche(ja, 0,0,0,0,0,0);
+	double restax = 0;
+	double restay = 0;
+	double xAnterior = 0;
+	double yAnterior = 0;
 	
 
 	
@@ -38,6 +44,7 @@ public class Ventana extends JFrame{
 		panel.setLayout(null);
 		
 		panel.add(ja);
+		panel.add(lF);
 		
 		add(panel,BorderLayout.CENTER);
 
@@ -206,21 +213,22 @@ public class Ventana extends JFrame{
 
 			while(true) {
 			
-			
-			
+		
 			
 			c.rot = ja.getRotacion();
+			
+			xAnterior = c.x;
+			yAnterior = c.y;
 
 			c.x = (int) (c.x + c.vel * Math.cos(c.rot));
 			c.y = (int) (c.y + c.vel * Math.sin(c.rot));
 			
 		
 			
-			if( c.x < 0 || c.x > 450) {
+			if( c.x < 0  || c.x > 400 ) {
 				
-
-				ja.setRotacion(ja.getRotacion() +  Math.PI);
-
+				ja.setRotacion(ja.getRotacion() + Math.PI);
+			
 			}
 			if( c.y <  0 || c.y > 410) {
 

@@ -1,4 +1,5 @@
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -44,7 +45,8 @@ public class Ventana extends JFrame{
 		panel.setLayout(null);
 		
 		panel.add(ja);
-		panel.add(lF);
+		//panel.add(lF);
+		panel.setBackground(Color.BLUE);
 		
 		add(panel,BorderLayout.CENTER);
 
@@ -171,38 +173,9 @@ public class Ventana extends JFrame{
 		setFocusable(true);
 		hilo.start();
 		
-		addMouseListener(new MouseListener() {
-			
-			@Override
-			public void mouseReleased(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void mousePressed(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void mouseExited(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void mouseEntered(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				// TODO Auto-generated method stub
-				System.out.println(e.getX() + "," + e.getY());
-			}
-		});
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+	
 	}
 	
 	

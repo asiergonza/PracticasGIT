@@ -12,6 +12,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+/**
+ * @author asiergonzi
+ *Creamos la ventana con su constructor y la definiremos. 
+ */
 public class Ventana extends JFrame{
 
 	JPanel panel = new JPanel();

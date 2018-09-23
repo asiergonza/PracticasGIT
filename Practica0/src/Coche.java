@@ -1,4 +1,8 @@
 
+/**
+ * @author asiergonzi
+ *definimos nuestro coche que luego sera el objeto que usaremos 
+ */
 public class Coche {
 	JLabelGraficoAjustado ja;
 	int vel;
